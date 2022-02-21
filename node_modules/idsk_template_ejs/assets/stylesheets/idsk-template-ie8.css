@@ -1,0 +1,620 @@
+/* idsk_frontend_toolkit includes */
+#global-header .header-wrapper:after, #global-header .header-wrapper .header-global:after, #global-header .header-wrapper .header-global .header-logo:after, #global-header .header-proposition #proposition-link:after,
+#global-header .header-proposition #proposition-links:after, #footer .footer-meta:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+#global-cookie-message p, #footer .footer-wrapper {
+  max-width: 960px;
+  width: 960px;
+  margin: 0 15px;
+  margin: 0 30px;
+  margin: 0 auto; }
+
+#global-header .header-wrapper:after, #global-header .header-wrapper .header-global:after, #global-header .header-wrapper .header-global .header-logo:after, #global-header .header-proposition #proposition-link:after,
+#global-header .header-proposition #proposition-links:after, #footer .footer-meta:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+/* local styleguide includes */
+@-ms-viewport {
+  width: device-width; }
+
+html, body, button, input, table, td, th {
+  font-family: "Source Sans Pro", "Arial", sans-serif; }
+
+html, body, div, h1, h2, h3, h4, h5, h6, article, aside, footer, header, hgroup, nav, section {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+main {
+  display: block; }
+
+.group:before,
+.group:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden; }
+
+.group:after {
+  clear: both; }
+
+.group {
+  zoom: 1; }
+
+.content-fixed {
+  top: 0;
+  position: fixed; }
+
+.shim {
+  display: block; }
+
+/*
+ * 1. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  -webkit-text-size-adjust: 100%;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 1 */
+  background-color: #eaeaea; }
+
+/*
+  Force the scrollbar to always display in IE10/11
+ */
+html {
+  -ms-overflow-style: scrollbar; }
+
+body {
+  background: white;
+  color: #0b0c0c;
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+ol, ul, nav ol, nav ul {
+  list-style: inherit; }
+
+fieldset {
+  border: none;
+  padding: 0; }
+
+a:link {
+  color: #215da8; }
+
+a:visited {
+  color: #4c2c92; }
+
+a:hover {
+  color: #2b8cc4; }
+
+a:active {
+  color: #2b8cc4; }
+
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ *    note - font-size reduced to 62.5% to allow simple rem/px font-sizing and fallback
+ *    http://snook.ca/archives/html_and_css/font-size-with-rem
+ * 2. Keeps page centred in all browsers regardless of content height
+ * 3. Removes Android and iOS tap highlight color to prevent entire container being highlighted
+ *    www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
+ */
+html {
+  font-size: 62.5%;
+  /* 1 */
+  overflow-y: scroll;
+  /* 2 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* 3 */ }
+
+/*
+ * 1. Font-size increased to compensate for change to html element font-size in
+ *    order to support beta typography which was set in ems
+ *    (62.5% * 160% = 100%)
+ * 2. Addresses margins handled incorrectly in IE6/7
+ */
+body {
+  font-size: 160%;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+b,
+strong {
+  font-weight: 600; }
+
+img {
+  border: 0; }
+
+abbr[title] {
+  cursor: help; }
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: searchfield-cancel-button;
+  margin-right: 2px; }
+
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/* For image replacement */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr; }
+  .ir br {
+    display: none; }
+
+/* Hide for both screenreaders and browsers */
+.hidden,
+.js-enabled .js-hidden {
+  display: none;
+  visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders */
+.visually-hidden,
+.visuallyhidden {
+  position: absolute;
+  left: -9999em;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  /*
+   * Extends the .visuallyhidden class to allow the element to be
+   * focusable when navigated to via the keyboard
+   */ }
+  .visually-hidden.focusable:active, .visually-hidden.focusable:focus,
+  .visuallyhidden.focusable:active,
+  .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden; }
+
+/* Give a strong clear visual idea as to what is currently in focus */
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+
+a:focus {
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47; }
+
+/* Make links slightly darker when focused to improve contrast. */
+a:link:focus {
+  color: #1f579d; }
+
+/* Make skiplinks visible when they are tabbed to */
+.skiplink {
+  position: absolute;
+  left: -9999em;
+  /* Default link colour doesn't have enough contrast against $focus-colour */ }
+  .skiplink:focus, .skiplink:visited {
+    color: #0b0c0c; }
+
+.skiplink:focus {
+  left: 0;
+  z-index: 1; }
+
+#skiplink-container {
+  text-align: center;
+  background: #0b0c0c; }
+  #skiplink-container div {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 1020px; }
+  #skiplink-container .skiplink {
+    display: -moz-inline-stack;
+    display: inline-block;
+    margin: 0.75em 0 0 30px; }
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0; }
+
+#global-header input[type=search]:focus {
+  outline: 3px solid #ffbf47;
+  /* Focus appears inside the input */
+  outline-offset: -2px; }
+#global-header h1 a:focus {
+  background-color: transparent;
+  outline: none; }
+#global-header a:focus {
+  color: #0b0c0c; }
+
+#global-header .header-wrapper:after, #global-header .header-wrapper .header-global:after, #global-header .header-wrapper .header-global .header-logo:after, #global-header .header-proposition #proposition-link:after,
+#global-header .header-proposition #proposition-links:after, #footer .footer-meta:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+#global-header {
+  background-color: #313133;
+  width: 100%; }
+  #global-header .header-wrapper {
+    background-color: #313133;
+    max-width: 990px;
+    margin: 0 auto;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 990px; }
+    #global-header .header-wrapper .header-global .header-logo {
+      float: left;
+      width: 30%; }
+      @media screen and (max-width: 379px) {
+        #global-header .header-wrapper .header-global .header-logo {
+          width: auto;
+          float: none; } }
+      #global-header .header-wrapper .header-global .header-logo .content {
+        margin: 0 15px; }
+    #global-header .header-wrapper .header-global .header-logo {
+      margin-top: 2px; }
+  #global-header.with-proposition .header-wrapper .header-global {
+    float: left;
+    width: 25%;
+    min-width: 240px; }
+    #global-header.with-proposition .header-wrapper .header-global .header-logo,
+    #global-header.with-proposition .header-wrapper .header-global .site-search {
+      width: 100%; }
+  #global-header.with-proposition .header-wrapper .header-proposition {
+    width: 55%;
+    float: left; }
+    #global-header.with-proposition .header-wrapper .header-proposition .content {
+      margin: 8px 15px 0 15px; }
+  #global-header.with-proposition.with-user .header-wrapper .header-proposition {
+    width: 45%; }
+  #global-header #logo {
+    float: left;
+    overflow: visible;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+    border-bottom: 1px solid transparent; }
+    #global-header #logo:hover, #global-header #logo:focus {
+      text-decoration: none;
+      border-bottom-color: white; }
+  #global-header .header-proposition {
+    padding-top: 10px;
+    padding-top: 0; }
+    #global-header .header-proposition #proposition-name {
+      font-family: "Source Sans Pro", "Arial", sans-serif;
+      font-weight: 400;
+      text-transform: none;
+      font-size: 18px;
+      line-height: 1.2;
+      font-size: 20px;
+      line-height: 1.25;
+      font-weight: bold;
+      color: white;
+      text-decoration: none; }
+    #global-header .header-proposition a#proposition-name:hover {
+      text-decoration: underline; }
+    #global-header .header-proposition a#proposition-name:focus {
+      color: #0b0c0c; }
+    #global-header .header-proposition a.menu {
+      font-family: "Source Sans Pro", "Arial", sans-serif;
+      font-weight: 400;
+      text-transform: none;
+      font-size: 14px;
+      line-height: 1.14286;
+      font-size: 16px;
+      line-height: 1.25;
+      color: white;
+      display: block;
+      float: right;
+      text-decoration: none;
+      padding-top: 4px;
+      margin-left: 10px;
+      padding-top: 6px;
+      margin-left: 0;
+      display: none; }
+      #global-header .header-proposition a.menu:hover {
+        text-decoration: underline; }
+      #global-header .header-proposition a.menu:after {
+        display: inline-block;
+        font-size: 8px;
+        height: 8px;
+        padding-left: 5px;
+        vertical-align: middle;
+        content: " \25BC"; }
+      #global-header .header-proposition a.menu.js-visible:after {
+        content: " \25B2"; }
+    #global-header .header-proposition #proposition-menu {
+      margin-top: 2px;
+      border-top: 1px #515153 solid; }
+      #global-header .header-proposition #proposition-menu.no-proposition-name {
+        margin-top: 37px; }
+    #global-header .header-proposition #proposition-link,
+    #global-header .header-proposition #proposition-links {
+      clear: both;
+      margin: 2px 0 0 0;
+      padding: 0;
+      list-style-type: none; }
+      .js-enabled #global-header .header-proposition #proposition-link, .js-enabled
+      #global-header .header-proposition #proposition-links {
+        display: none;
+        display: block; }
+        .js-enabled #global-header .header-proposition #proposition-link.js-visible, .js-enabled
+        #global-header .header-proposition #proposition-links.js-visible {
+          display: block; }
+      #global-header .header-proposition #proposition-link li,
+      #global-header .header-proposition #proposition-links li {
+        float: left;
+        width: 50%;
+        padding: 3px 0;
+        border-bottom: 1px solid #2e3133;
+        display: block;
+        width: auto;
+        padding: 0 20px 0 0;
+        border-bottom: 0; }
+        #global-header .header-proposition #proposition-link li.clear-child,
+        #global-header .header-proposition #proposition-links li.clear-child {
+          clear: left; }
+      #global-header .header-proposition #proposition-link a,
+      #global-header .header-proposition #proposition-links a {
+        color: #c1d0e2;
+        text-decoration: none;
+        font-family: "Source Sans Pro", "Arial", sans-serif;
+        font-weight: 400;
+        text-transform: none;
+        font-size: 14px;
+        line-height: 1.14286;
+        font-size: 16px;
+        line-height: 1.25;
+        line-height: 23px; }
+        #global-header .header-proposition #proposition-link a:hover,
+        #global-header .header-proposition #proposition-links a:hover {
+          text-decoration: underline; }
+        #global-header .header-proposition #proposition-link a.active,
+        #global-header .header-proposition #proposition-links a.active {
+          color: white; }
+        #global-header .header-proposition #proposition-link a:focus,
+        #global-header .header-proposition #proposition-links a:focus {
+          color: #0b0c0c; }
+    #global-header .header-proposition #proposition-link {
+      float: right;
+      line-height: 22px;
+      float: none; }
+      .js-enabled #global-header .header-proposition #proposition-link {
+        display: block; }
+  #global-header .header-user {
+    width: 100%;
+    min-width: 155px;
+    width: 20%;
+    float: right;
+    text-align: right; }
+    #global-header .header-user .user-menu {
+      position: absolute;
+      display: block;
+      right: 15px;
+      top: 25px;
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      margin-top: 5px;
+      vertical-align: top;
+      position: static; }
+      #global-header .header-user .user-menu #user-icon {
+        background: url("images/icon_user.png") no-repeat;
+        display: block;
+        width: 28px;
+        height: 28px; }
+    #global-header .header-user #user-signup {
+      position: absolute;
+      font-size: 12px;
+      width: 80px;
+      height: 30px;
+      line-height: 30px;
+      top: 25px;
+      right: 15px;
+      border: 1px white solid;
+      display: block;
+      float: right;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      top: 20px;
+      width: 125px;
+      height: 40px;
+      font-size: 20px;
+      line-height: 40px;
+      position: static; }
+      #global-header .header-user #user-signup:hover {
+        background: rgba(0, 0, 0, 0.4);
+        text-decoration: none;
+        color: white;
+        outline: none; }
+    #global-header .header-user #user-links {
+      background: rgba(0, 0, 0, 0.4);
+      display: block;
+      padding: 15px;
+      margin: 20px 0 -20px 0;
+      text-align: right;
+      margin-left: -15px;
+      margin-right: -15px;
+      display: inline-block;
+      padding: 0;
+      text-align: left;
+      margin: 0 0 0 9px;
+      background: transparent;
+      max-width: 65%; }
+      #global-header .header-user #user-links a#user-name {
+        display: block;
+        color: white;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 600;
+        text-decoration: none; }
+        #global-header .header-user #user-links a#user-name:active, #global-header .header-user #user-links a#user-name:hover {
+          text-decoration: underline;
+          outline: none;
+          background: transparent; }
+      #global-header .header-user #user-links a#user-logout {
+        display: block;
+        color: #c1d0e2;
+        font-size: 14px;
+        line-height: 18px;
+        text-decoration: none; }
+        #global-header .header-user #user-links a#user-logout:active, #global-header .header-user #user-links a#user-logout:hover {
+          text-decoration: underline;
+          outline: none;
+          background: transparent; }
+      .js-enabled #global-header .header-user #user-links {
+        display: none;
+        display: inline-block; }
+        .js-enabled #global-header .header-user #user-links.js-visible {
+          display: block; }
+
+/* Global header bar */
+#global-header-bar {
+  height: 3px;
+  background: url("images/stripe.png");
+  font-size: 0; }
+
+/* Global cookie message */
+.js-enabled #global-cookie-message {
+  display: none;
+  /* shown with JS, always on for non-JS */ }
+
+#global-cookie-message {
+  width: 100%;
+  background-color: #d5e8f3;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  #global-cookie-message p {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 14px;
+    line-height: 1.14286;
+    font-size: 16px;
+    line-height: 1.25;
+    margin-top: 0;
+    margin-bottom: 0; }
+
+/* Global footer */
+#footer {
+  background-color: #eaeaea; }
+  #footer .footer-wrapper {
+    background-color: #eaeaea;
+    padding-top: 30px; }
+  #footer a {
+    color: #005ea5; }
+    #footer a:hover {
+      color: #0b0c0c; }
+  #footer h2 {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 18px;
+    line-height: 1.2;
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: bold;
+    color: #0b0c0c;
+    margin: 0; }
+    #footer h2 a {
+      color: inherit; }
+  #footer .footer-logo {
+    margin: 0 0 30px 0;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 85px; }
+    #footer .footer-logo img.logo {
+      max-width: 218px;
+      padding-top: 0.1em; }
+  #footer .open-government-licence {
+    display: inline-block; }
+    #footer .open-government-licence p {
+      font-family: "Source Sans Pro", "Arial", sans-serif;
+      font-weight: 400;
+      text-transform: none;
+      font-size: 14px;
+      line-height: 1.14286;
+      font-size: 16px;
+      line-height: 1.25;
+      margin: 0;
+      padding-top: 0.1em; }
+    #footer .open-government-licence ul {
+      font-family: "Source Sans Pro", "Arial", sans-serif;
+      font-weight: 400;
+      text-transform: none;
+      font-size: 14px;
+      line-height: 1.5;
+      font-size: 16px;
+      line-height: 1.5;
+      display: inline-block;
+      list-style: none;
+      margin: 5px 0;
+      padding: 0;
+      margin: 5px 0; }
+      #footer .open-government-licence ul li {
+        display: inline-block;
+        margin: 0 15px 0 0; }
+  #footer .footer-meta {
+    padding-bottom: 60px;
+    clear: both;
+    font-size: 0;
+    color: #0b0c0c; }
+    #footer .footer-meta .footer-meta-inner {
+      display: inline-block;
+      vertical-align: bottom;
+      width: 100%;
+      width: 75%; }
+    #footer .footer-meta .copyright {
+      font-family: "Source Sans Pro", "Arial", sans-serif;
+      font-weight: 400;
+      text-transform: none;
+      font-size: 14px;
+      line-height: 1.14286;
+      font-size: 16px;
+      line-height: 1.25;
+      text-align: left;
+      margin: 0 0 30px 0;
+      width: 100%;
+      display: block;
+      vertical-align: top;
+      display: inline-block;
+      text-align: inherit;
+      width: 25%;
+      padding-top: 0;
+      margin-bottom: 0; }
+      #footer .footer-meta .copyright a {
+        display: block;
+        text-decoration: none; }
